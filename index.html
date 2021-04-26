@@ -8,6 +8,7 @@
 <title>Nick Cunningham Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/ecb3cdb346.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,6 +43,49 @@
         #main {
             margin-left: 0
         }
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -70px;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
     }
 </style>
 
@@ -83,7 +127,7 @@
     <div class="w3-padding-large" id="main">
         <!-- Header/Home -->
         <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-            <h1 class="w3-jumbo"><span class="w3-hide-small">Hi, I'm</span> Nick</h1>
+            <h1 class="w3-jumbo">Nick<span class="w3-hide-small"> Cunningham</span></h1>
             <p>Software Engineer</p>
             <img src="images/nick_headshot.jpg" alt="Business headshot of Nick in a suit" class="w3-image" width="288"
                 height="512">
@@ -95,26 +139,20 @@
             <hr style="width:200px" class="w3-opacity">
             <p>
                 Thanks for visiting my page! I am a senior Computer Science major at Colorado State University. My
-                completed
-                coursework includes team-based, long-term projects in an Agile/Scrum development environment.
+                completed coursework includes team-based, long-term projects in an Agile/Scrum development environment.
             </p>
             <p>
                 During two software engineering internships with Lockheed Martin, I contributed to team-based software
-                development,
-                cross domain security solutions, and secure website design using the Django web framework. I delivered
-                solutions
-                that optimize project management for systems utilized on over 1000 installations worldwide, and
-                developed
-                web content accessible by over 12,000 Lockheed Martin employees.
+                development, cross domain security solutions, and secure website design using the Django web framework. 
+                I delivered solutions that optimize project management for systems utilized on over 1000 installations 
+                worldwide, and developed web content accessible by over 12,000 Lockheed Martin employees.
             </p>
             <p>
                 Prior to pursuing a degree, I served in the United States Air Force, where I was an aircrew member and
                 international liaison stationed overseas for five years. In this capacity, I held multiple supervisory
-                roles
-                and worked on numerous independent teams tasked with the safe operation of multimillion-dollar military
-                assets. My experience as a military aviator taught me the value of strong communication, respect for
-                cultural
-                differences, and how to maximize these diverse views to achieve the best possible results.
+                roles and worked on numerous independent teams tasked with the safe operation of multimillion-dollar 
+                military assets. My experience as a military aviator taught me the value of strong communication, respect 
+                for cultural differences, and how to maximize these diverse views to achieve the best possible results.
             </p>
 
             <!-- Skills Bars -->
@@ -170,11 +208,58 @@
             <!-- Grid for projects -->
             <div class="w3-row-padding" style="margin:0 -16px">
                 <div class="w3-half">
-                    <p>Project #1</p>
+                    <div class="w3-center">
+                        <h4>Trip Itinerary Web App</h4>
+                        <div class="tooltip">
+                            <em class="fab fa-java w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">Java</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fab fa-react w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">React.js</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fab fa-github w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">Git / Version Control</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fas fa-database w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">SQL / DBMS</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Semester-long, team-based, process-oriented project utilizing Agile/Scrum development methodologies</li>
+                        <li>Built a frontend with React and Leaflet, and a RESTful API through a backend written in Java and SQL</li>
+                        <li>Created algorithms for TSP optimization, JSON schema validation, and state-based graphical interaction</li>
+                        <li>Recognized by classmates and instructor for inter-team assistance above and beyond project requirements</li>
+                    </ul>
                 </div>
 
                 <div class="w3-half">
-                    <p>Project #2</p>
+                    <div class="w3-center">
+                        <h4>Multiclass List Organizer</h4>
+                        <div class="tooltip">
+                            <em class="fas fa-laptop-code w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">C++</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fas fa-terminal w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">Scripting / Command Line</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fas fa-check w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">Automated Testing</span>
+                        </div>
+                        <div class="tooltip">
+                            <em class="fas fa-atom w3-xxlarge w3-padding-large"></em>
+                            <span class="tooltiptext">IDEs</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Semester-long, individual project to read data from various inputs into several interacting classes for organization</li>
+                        <li>Allowed for selective output of object information based on command line arguments/options and preconditions</li>
+                        <li>Utilized interfaces, pointers/references, constructors, operator overloading, error handling, iteration, and templating</li>
+                    </ul>
                 </div>
                 <!-- End projects grid -->
             </div>
@@ -201,9 +286,9 @@
                     <em class="fa fa-download"></em> Download Resume
                 </button>
             </a>
-            
+<!--             
             <p>Send me a message:</p>
-            <form action="/action_page.php" target="_blank">
+            <form action="contact.php" method="POST">
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
@@ -213,7 +298,7 @@
                         <em class="fa fa-paper-plane"></em> SEND MESSAGE
                     </button>
                 </p>
-            </form>
+            </form> -->
             <!-- End Contact Section -->
         </div>
 
